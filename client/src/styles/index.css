@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  background-color: rgb(226 232 240);
+}

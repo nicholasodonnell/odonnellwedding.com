@@ -1,0 +1,6 @@
+## node
+node_modules
+
+## public
+public
+!public/favicon.ico

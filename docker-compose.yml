@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+
+  client:
+    build:
+      context: ./client
+    expose:
+      - 3000
+    image: nicholasodonnell/odonnellwedding-client:latest
+    networks:
+      - odonnellwedding
+
+  server:
+    build:
+      context: ./server
+    expose:
+      - 8080
+    image: nicholasodonnell/odonnellwedding-server:latest
+    networks:
+      - odonnellwedding
+
+networks:
+  odonnellwedding:
+    driver: bridge
+    name: odonnellwedding

@@ -1,0 +1,35 @@
+version: "3.5"
+services:
+
+  client:
+    build:
+      target: dev
+    command: yarn start:dev
+    container_name: odonnellwedding-client
+    env_file:
+      - .env
+    image: nicholasodonnell/odonnellwedding-client:dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/app
+      - client-node-modules:/app/node_modules
+
+  server:
+    build:
+      target: dev
+    command: yarn start:dev
+    container_name: odonnellwedding-server
+    env_file:
+      - .env
+    image: nicholasodonnell/odonnellwedding-server:dev
+    ports:
+      - 8080:8080
+    tty: true
+    volumes:
+      - ./server:/app
+      - server-node-modules:/app/node_modules
+
+volumes:
+  client-node-modules:
+  server-node-modules:
