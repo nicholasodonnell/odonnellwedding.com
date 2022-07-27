@@ -11,6 +11,7 @@ module.exports = {
   mode: NODE_ENV,
   devtool: isProd ? 'hidden-source-map' : 'inline-source-map',
   devServer: {
+    historyApiFallback: true,
     host: '0.0.0.0',
     hot: true,
     liveReload: false,
@@ -56,6 +57,14 @@ module.exports = {
             loader: 'postcss-loader',
           },
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets',
+        },
       },
     ],
   },
