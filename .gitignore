@@ -9,5 +9,5 @@ yarn-error.log*
 docker-compose.override.yml
 
 ## client
-client/public/**
-!client/public/favicon.ico
+public/**
+!public/favicon.ico

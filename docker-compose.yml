@@ -1,21 +1,12 @@
 version: "3.5"
 services:
 
-  client:
+  app:
     build:
-      context: ./client
+      context: .
     expose:
       - 3000
-    image: nicholasodonnell/odonnellwedding-client:latest
-    networks:
-      - odonnellwedding
-
-  server:
-    build:
-      context: ./server
-    expose:
-      - 8080
-    image: nicholasodonnell/odonnellwedding-server:latest
+    image: nicholasodonnell/odonnellwedding:latest
     networks:
       - odonnellwedding
 

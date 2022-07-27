@@ -1,7 +1,5 @@
 FROM node:16-buster-slim as dev
 
-ENV DOCKER=true
-
 WORKDIR /app
 
 ENV NODE_ENV=development
@@ -33,5 +31,3 @@ COPY --from=build /app/index.template.html /var/index.template.html
 RUN chmod +x /entrypoint.sh
 
 EXPOSE 80
-
-ENTRYPOINT [ "/entrypoint.sh" ]

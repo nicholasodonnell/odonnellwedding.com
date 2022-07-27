@@ -1,10 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { DefinePlugin } = require('webpack')
 
-const { DOCKER, NODE_ENV } = process.env
+const { NODE_ENV } = process.env
 
-const isDocker = !!DOCKER
 const isProd = NODE_ENV === 'production'
 
 module.exports = {
@@ -74,23 +72,12 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    new DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.SERVER_URL': JSON.stringify(process.env.SERVER_URL),
-    }),
     new HtmlWebpackPlugin({
       favicon: './public/favicon.ico',
       hash: isProd,
       minify: isProd,
-      filename: isProd && isDocker
-        ? '/tmp/index.template.html'
-        : 'index.html',
+      filename: 'index.html',
       template: './src/index.html',
-      templateParameters: {
-        env: isDocker
-          ? `window.env = { "SERVER_URL": "\${SERVER_URL}" }`
-          : null,
-      },
     }),
   ],
 }
