@@ -1,14 +1,21 @@
 import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
-import Home from './views/index'
+import BackToHome from './components/backToHome'
+import useScrollToTop from './hooks/useScrollToTop'
+import Directions from './views/directions'
+import Home from './views/home'
+import Hotels from './views/hotels'
 
-export default () => (
-  <Routes>
-    <Route index element={<Home />} />
-    <Route
-      path="*"
-      element={<Navigate to={{ pathname: '' }} />}
-    />
-  </Routes>
-)
+export default () => {
+  useScrollToTop()
+
+  return (
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="/directions" element={<Directions />} />
+      <Route path="/hotels" element={<Hotels />} />
+      <Route path="*" element={<BackToHome />} />
+    </Routes>
+  )
+}
