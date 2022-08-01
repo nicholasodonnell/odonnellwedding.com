@@ -12,7 +12,12 @@ export const Link = ({ children, className, href, to }) => {
           {children}
         </ReactRouterDomLink>
       ) : (
-        <a className={linkClassName} href={href}>
+        <a
+          className={linkClassName}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {children}
         </a>
       )}

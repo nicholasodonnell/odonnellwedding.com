@@ -3,9 +3,9 @@ import React from 'react'
 import { useTitle } from '../hooks/title'
 
 export default () => {
-  useTitle('Hotels')
+  useTitle('Philly Favorites')
 
   return (
-    <p>Hotels</p>
+    <p>Philly favorites</p>
   )
 }

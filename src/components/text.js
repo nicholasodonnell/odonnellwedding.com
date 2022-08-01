@@ -13,12 +13,18 @@ export const A = ({ children, className, href }) => (
 )
 
 export const H1 = ({ children, className }) => (
-  <h1 className={cx('font-parisienne text-5xl', className)}>
+  <h1 className={cx('font-parisienne text-4xl', className)}>
     {children}
   </h1>
 )
 
 export const H2 = ({ children, className }) => (
+  <h2 className={cx('text-3xl', className)}>
+    {children}
+  </h2>
+)
+
+export const H3 = ({ children, className }) => (
   <h2 className={cx('text-2xl', className)}>
     {children}
   </h2>

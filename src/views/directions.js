@@ -2,19 +2,19 @@ import React from 'react'
 
 import parkingImage from '../assets/parking.png'
 import Address from '../components/address'
+import { OutsideContainer } from '../components/container'
 import Map from '../components/map'
-import Page, { Header, Main } from '../components/page'
-import { H1, H2 } from '../components/text'
+import { H3 } from '../components/text'
+import { useTitle } from '../hooks/title'
 
-export default () => (
-  <Page theme="sage">
-    <Header className="mb-8">
-      <H1>Directions</H1>
-    </Header>
-    <Main>
-      <div className="grid grid-cols-2 gap-2 mb-8">
+export default () => {
+  useTitle('Directions')
+
+  return (
+    <>
+      <div className="grid grid-cols-2 gap-2 mb-4">
         <div>
-          <H2 className="mb-2">Venue</H2>
+          <H3 className="mb-2">Venue</H3>
           <Address
             address="244 South 3rd Street, Philadelphia, PA 19106"
             label="The Powel House"
@@ -25,7 +25,7 @@ export default () => (
           </Address>
         </div>
         <div>
-          <H2 className="mb-2">Parking</H2>
+          <H3 className="mb-2">Parking</H3>
           <Address
             address="125 South 2nd Street, Philadelphia, PA 19106"
             label="Auto Park Olde City"
@@ -36,10 +36,12 @@ export default () => (
           </Address>
         </div>
       </div>
-      <Map
-        className="-mb-4"
-        src={parkingImage}
-      />
-    </Main>
-  </Page>
-)
+      <OutsideContainer className="-mb-4 flex-1">
+        <Map
+          className="max-h-[40rem]"
+          src={parkingImage}
+        />
+      </OutsideContainer>
+    </>
+  )
+}
