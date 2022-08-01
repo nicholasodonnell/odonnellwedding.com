@@ -7,7 +7,7 @@ import thomasBondHouseImage from '../assets/thomas-bond-house.jpg'
 import wyndhamImage from '../assets/wyndham.jpg'
 import Address from '../components/address'
 import Article from '../components/article'
-import Contact from '../components/Contact'
+import Contact from '../components/contact'
 import { H3, P } from '../components/text'
 import { useTitle } from '../hooks/title'
 
