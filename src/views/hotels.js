@@ -15,11 +15,8 @@ export default () => {
   useTitle('Hotels')
 
   return (
-    <>
-      <Article
-        className="mb-8 pb-8 border-b border-gray"
-        image={marriottOldCityImage}
-      >
+    <div className="grid grid-cols-1 gap-8">
+      <Article image={marriottOldCityImage}>
         <H3>Philadelphia Marriott Old City</H3>
         <Address
           address="One Dock St, Philadelphia, PA 19106"
@@ -31,10 +28,7 @@ export default () => {
         />
         <P><LocationMarkerIcon className="h-5 w-5 inline-block" /> 5 min walk</P>
       </Article>
-      <Article
-        className="mb-8 pb-8 border-b border-gray"
-        image={thomasBondHouseImage}
-      >
+      <Article image={thomasBondHouseImage}>
         <H3>Thomas Bond House</H3>
         <Address
           address="129 S 2nd St, Philadelphia, PA 19106"
@@ -46,10 +40,7 @@ export default () => {
         />
         <P><LocationMarkerIcon className="h-5 w-5 inline-block" /> 5 min walk</P>
       </Article>
-      <Article
-        className="mb-8 pb-8 border-b border-gray"
-        image={renaissanceImage}
-      >
+      <Article image={renaissanceImage}>
         <H3>Renaissance Philadelphia Downtown Hotel</H3>
         <Address
           address="401 Chestnut St, Philadelphia, PA 19106"
@@ -61,9 +52,7 @@ export default () => {
         />
         <P><LocationMarkerIcon className="h-5 w-5 inline-block" /> 6 min walk</P>
       </Article>
-      <Article
-        image={wyndhamImage}
-      >
+      <Article image={wyndhamImage}>
         <H3>Wyndham Philadelphia Historic District</H3>
         <Address
           address="401 Chestnut St, Philadelphia, PA 19106"
@@ -75,6 +64,6 @@ export default () => {
         />
         <P><LocationMarkerIcon className="h-5 w-5 inline-block" /> 10 min walk</P>
       </Article>
-    </>
+    </div>
   )
 }

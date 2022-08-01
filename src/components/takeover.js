@@ -2,7 +2,7 @@ import cx from 'classnames'
 import React from 'react'
 
 export const Hamburger = ({ active, className, onClick }) => (
-  <button className={cx('w-10 h-10 p-4', className)} onClick={onClick}>
+  <button className={cx('w-10 h-10 p-4', className)} onClick={() => onClick()}>
     <span aria-hidden="true" className={cx('block absolute left-1/2 -translate-x-1/2 h-0.5 w-5 bg-black transform transition duration-500 ease-in-out', {
       'rotate-45': active,
       '-translate-y-1.5': !active,
