@@ -11,6 +11,7 @@ module.exports = {
       peach: 'var(--peach)',
       sage: 'var(--sage)',
       white: 'var(--white)',
+      gray: '#ccc',
     },
     fontFamily: {
       sans: [ 'Poppins', 'ui-sans-serif' ],

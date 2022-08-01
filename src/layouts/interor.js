@@ -14,8 +14,8 @@ export default () => {
   const title = withTitle()
   const { pathname } = useLocation()
 
-  const toggleNavOpen = useCallback(state => {
-    setNavOpen(navOpen => state == null ? state : !navOpen)
+  const toggleNavOpen = useCallback(open => {
+    setNavOpen(state => open != null ? open : !state)
   }, [])
 
   useEffect(() => {
