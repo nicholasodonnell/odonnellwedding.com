@@ -1,15 +1,7 @@
 import cx from 'classnames'
 import React from 'react'
 
-import { OutsideContainer } from '../components/container'
-
-export const Figure = ({ className, src }) => (
-  <OutsideContainer>
-    <figure className={cx('flex flex-col items-center justify-center', className)}>
-      <img className="w-full" src={src} alt="" />
-    </figure>
-  </OutsideContainer>
-)
+import Figure from './figure'
 
 export default ({ children, className, image }) => (
   <article className={cx('flex flex-col', className)}>
