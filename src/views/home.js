@@ -28,10 +28,8 @@ export default () => {
         <Linktree>
           <Link to="/directions">Directions / Parking</Link>
           <Link to="/hotels">Hotels</Link>
-          <Link href="#">Amazon Registry</Link>
           <Link href="#">Pottery Barn Registry</Link>
           <Link to="/philly">Our Philly Favorites</Link>
-          <Link href="#">Wedding Playlist</Link>
         </Linktree>
       </Main>
     </>
