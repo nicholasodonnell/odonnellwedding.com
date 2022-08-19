@@ -37,7 +37,7 @@ export default () => {
               <NavItem to="/">Home</NavItem>
               <NavItem to="/directions">Directions / Parking</NavItem>
               <NavItem to="/hotels">Hotels</NavItem>
-              <NavItem href="#">Pottery Barn Registry</NavItem>
+              <NavItem href="https://www.potterybarn.com/registry/d7rsbt658b/registry-list.html">Pottery Barn Registry</NavItem>
               <NavItem to="/philly">Our Philly Favorites</NavItem>
             </Nav>
           </Container>

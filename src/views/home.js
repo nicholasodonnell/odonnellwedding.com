@@ -28,7 +28,7 @@ export default () => {
         <Linktree>
           <Link to="/directions">Directions / Parking</Link>
           <Link to="/hotels">Hotels</Link>
-          <Link href="#">Pottery Barn Registry</Link>
+          <Link href="https://www.potterybarn.com/registry/d7rsbt658b/registry-list.html">Pottery Barn Registry</Link>
           <Link to="/philly">Our Philly Favorites</Link>
         </Linktree>
       </Main>
