@@ -7,6 +7,7 @@ import Main from '../components/main'
 import Nav, { NavItem } from '../components/nav'
 import Takeover, { Hamburger } from '../components/takeover'
 import { H3 } from '../components/text'
+import { NAVIGATION } from '../constants'
 import { withTitle } from '../hooks/title'
 
 export default () => {
@@ -34,11 +35,9 @@ export default () => {
         <Takeover className="z-10" active={navOpen}>
           <Container className="pt-14 justify-center">
             <Nav className="text-center">
-              <NavItem to="/">Home</NavItem>
-              <NavItem to="/directions">Directions / Parking</NavItem>
-              <NavItem to="/hotels">Hotels</NavItem>
-              <NavItem href="https://www.potterybarn.com/registry/d7rsbt658b/registry-list.html">Pottery Barn Registry</NavItem>
-              <NavItem to="/philly">Our Philly Favorites</NavItem>
+              {Object.entries(NAVIGATION).map(([ label, href ]) => (
+                <NavItem key={label} href={href}>{label}</NavItem>
+              ))}
             </Nav>
           </Container>
         </Takeover>

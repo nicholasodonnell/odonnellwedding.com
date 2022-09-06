@@ -6,6 +6,7 @@ import Header from '../components/header'
 import Linktree, { Link } from '../components/linktree'
 import Main from '../components/main'
 import { H1, P } from '../components/text'
+import { NAVIGATION } from '../constants'
 import useDaysUntil from '../hooks/useDaysUntil'
 
 export default () => {
@@ -26,10 +27,9 @@ export default () => {
       </Header>
       <Main>
         <Linktree>
-          <Link to="/directions">Directions / Parking</Link>
-          <Link to="/hotels">Hotels</Link>
-          <Link href="https://www.potterybarn.com/registry/d7rsbt658b/registry-list.html">Pottery Barn Registry</Link>
-          <Link to="/philly">Our Philly Favorites</Link>
+          {Object.entries(NAVIGATION).slice(1).map(([ label, href ]) => (
+            <Link key={label} href={href}>{label}</Link>
+          ))}
         </Linktree>
       </Main>
     </>

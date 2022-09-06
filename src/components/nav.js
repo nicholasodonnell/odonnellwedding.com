@@ -2,14 +2,15 @@ import cx from 'classnames'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export const NavItem = ({ children, className, href, to }) => {
+export const NavItem = ({ children, className, href }) => {
   const navClassName = cx('text-black text-xl', className)
+  const isExternal = href.startsWith('http')
 
   return (
     <>
-      {to ? (
+      {!isExternal ? (
         <NavLink
-          to={to}
+          to={href}
           className={({ isActive }) => cx(navClassName, {
             'underline underline-offset-8': isActive,
           })}

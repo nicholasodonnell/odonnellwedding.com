@@ -2,13 +2,14 @@ import cx from 'classnames'
 import React from 'react'
 import { Link as ReactRouterDomLink } from 'react-router-dom'
 
-export const Link = ({ children, className, href, to }) => {
+export const Link = ({ children, className, href }) => {
   const linkClassName = cx('bg-sage color-white p-4 text-white text-xl rounded-xl', className)
+  const isExternal = href.startsWith('http')
 
   return (
     <>
-      {to ? (
-        <ReactRouterDomLink className={linkClassName} to={to}>
+      {!isExternal ? (
+        <ReactRouterDomLink className={linkClassName} to={href}>
           {children}
         </ReactRouterDomLink>
       ) : (
