@@ -3,7 +3,7 @@ import React from 'react'
 
 import hiltonImage from '../assets/hilton.jpg'
 import holidayInnImage from '../assets/holiday-inn.jpg'
-import kimptonImage from '../assets/Kimpton.jpg'
+import kimptonImage from '../assets/kimpton.jpg'
 import marriottOldCityImage from '../assets/marriott-old-city.jpg'
 import renaissanceImage from '../assets/renaissance.jpg'
 import thomasBondHouseImage from '../assets/thomas-bond-house.jpg'
