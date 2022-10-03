@@ -21,8 +21,12 @@ export default () => {
           October 1 &bull; 4-9PM
           <br />
           Powel House &bull; Philadelphia
-          <br />
-          {daysUntil} day{daysUntil !== 1 ? 's' : ''}
+          {daysUntil > 0 && (
+            <>
+              <br />
+              {daysUntil} day{daysUntil !== 1 ? 's' : ''}
+            </>
+          )}
         </P>
       </Header>
       <Main>
